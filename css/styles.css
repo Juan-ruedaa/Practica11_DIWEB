@@ -1,0 +1,313 @@
+body{
+    margin: 0px;
+}
+
+#contenido{
+    display: flex;
+    flex-flow: column;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+/* Cabecera */
+#contenido>header{
+    *border: solid 1px black;
+    background-color: #3B53B0;
+    display: flex;
+    flex-basis: 140px;
+    color: white;
+    align-items: center;
+    width: 100%;
+}
+
+#contenido>header>h1{
+    text-align: center;
+    width: 100%;
+    font-size: 55px;
+}
+
+
+/* Main */
+#contenido>main{
+    *background-color: #3B53B0;
+    *border: solid 1px red;
+    flex-basis: 800px;
+    display: flex; 
+}
+
+    /*Contenido central*/
+    #contenido>main>#contenidoCentral{
+        *background-color: rgb(247, 185, 80);
+        *border: solid blue;
+        flex-basis: 800px;
+        flex-grow: 2;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 3em;
+        padding: 40px;
+    }
+        /* Artículos */
+        #contenido>main>#contenidoCentral>article{
+            *border: solid red;
+            min-height: 100px;
+            display: flex; 
+            flex-flow: column;
+            box-shadow: 1px 1px 2px #888888, 0px 0px 1px #888888;
+        }
+
+        #contenido>main>#contenidoCentral>article>.tituloArticulo{
+            background-color: #3B53B0;
+            *border: solid purple;
+            flex-basis: 25%;
+            color: white;
+            text-align: center;
+            font-size: 17px;
+        }
+
+        #contenido>main>#contenidoCentral>article>.textoArticulo{
+            *border: solid purple;
+            flex-basis: 55%;
+            text-align: justify;
+            padding: 10px;
+            
+        }
+
+        #contenido>main>#contenidoCentral>article>.botonesArticulo{
+            flex-basis: 20%;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        #contenido>main>#contenidoCentral>article>.botonesArticulo>.botonEliminar{
+            flex-basis: 25%; 
+            *border: solid;
+        }
+
+        #contenido>main>#contenidoCentral>article>.botonesArticulo>.botonEliminar>img{
+            width: 40%;
+        }
+
+
+        #contenido>main>#contenidoCentral>article>.botonesArticulo>.fecha{
+            flex-basis: 50%;
+            *border: solid;
+        }
+
+        #contenido>main>#contenidoCentral>article>.botonesArticulo>.botonEditar{
+            flex-basis: 25%;
+            *border: solid ; 
+        }
+
+        #contenido>main>#contenidoCentral>article>.botonesArticulo>.botonEditar>img{
+            width: 40%;
+        }
+
+    /*Contenido lateral*/    
+    #contenido>main>#contenidoLateral{
+        flex-basis: 150px;
+        flex-grow: 1;
+        display: flex;
+        flex-flow: column;
+    } 
+
+    #contenido>main>#contenidoLateral>#busqueda{
+        flex-basis: 20%;
+        display: flex;
+        align-items: center;
+        width: 99%;
+    }
+
+    #contenido>main>#contenidoLateral>#busqueda>img{
+        width: 35px;
+        margin-left: 57px;
+    }
+
+    #contenido>main>#contenidoLateral>#busqueda>#barraBusqueda{
+        width: 50%;
+    }
+
+    #contenido>main>#contenidoLateral>#busqueda>#barraBusqueda>input{
+        width: 65%;
+        height: 20px;
+        margin-left: 80px;
+        padding: 10px;
+        border: none;
+        border-bottom: 3px solid #3B53B0;
+        transition: 1s;
+    }
+
+    #contenido>main>#contenidoLateral>#busqueda>#barraBusqueda>input:focus{
+        width: 118%;
+        outline: none;
+        border-bottom: 3px solid #3B53B0;
+        margin-left: 20px;
+    }
+
+    /*Categorías*/
+    #contenido>main>#contenidoLateral>#categorias{
+        flex-basis: 50%;
+        flex-grow: 1;
+        display: flex; 
+        flex-flow: column;
+    }   
+
+        #contenido>main>#contenidoLateral>#categorias>.categoria{
+            width: 94%;
+            flex-basis: 10%;
+            transition: 0.5s;
+            border-bottom: solid #3B53B0;
+            margin-top: 5px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #contenido>main>#contenidoLateral>#categorias>.categoria:hover{
+            background-color:#3B53B0;
+            color: white;
+        }
+
+            #contenido>main>#contenidoLateral>#categorias>.categoria>.texto{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+                #contenido>main>#contenidoLateral>#categorias>.categoria>.texto>.asignatura{
+                    font-size: 22px;
+                    font-weight: bold;
+                    flex-grow: 1;
+                }
+
+                #contenido>main>#contenidoLateral>#categorias>.categoria>.texto>.numeroTareas{
+                    font-size: 17px;
+                    flex-grow: 1;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                }
+
+
+    #contenido>main>#contenidoLateral>#botonAnnadir{
+        flex-basis: 20%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #contenido>main>#contenidoLateral>#botonAnnadir>img{ 
+        width: 25%;
+    }
+
+
+
+/*****MODIFICAR*****/
+#editar{
+    position: fixed;
+    left: -100%;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    transition: all 0.5s;
+    align-items: center;
+    z-index: 101;
+}
+
+#editar>header{
+    color: white;
+    background-color: #3B53B0;
+    width: 30%;
+    text-align: center;
+    font-size: 24px;
+}
+
+#editar>#contenidoFormulario{
+    width: 30%;
+    background-color: white;
+    *padding: 1%;
+    text-align: center;
+}
+
+
+
+#background_shadow{
+    z-index: 100;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+#formulario{
+    padding:8%;
+    display: flex;
+    flex-flow: column;
+}
+
+#formulario>div>label{
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 2%;
+}
+
+#formulario>div>select{
+    width: 55%;
+    background-color: white;
+    border: none;
+    border-bottom: 2px solid rgb(59, 84, 176);
+    transition: transform 0.3s;
+}
+
+
+#formulario>div>textarea{
+    border: 1px solid rgb(59, 84, 176);
+    overflow-y: scroll;
+    resize: none;
+}
+
+
+
+#formulario>div>input{
+    width: 55%;
+    border: none;
+    border-bottom: 2px solid rgb(59, 84, 176);
+}
+
+
+#contenidoFormulario>#formulario>.botonArticulo{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    margin-top: 5%;
+}
+
+
+#contenidoFormulario>#formulario>.botonArticulo>input{
+   background-color: rgb(59, 84, 176);
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 18px;
+    color: white;
+    width: 30%;
+    transition: 0.6s; 
+    margin: 3%;
+}
+
+
