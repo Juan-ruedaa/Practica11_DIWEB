@@ -1,5 +1,6 @@
 body{
     margin: 0px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #contenido{
@@ -25,6 +26,7 @@ body{
     text-align: center;
     width: 100%;
     font-size: 55px;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -63,6 +65,7 @@ body{
             color: white;
             text-align: center;
             font-size: 17px;
+            font-family: 'Roboto', sans-serif;
         }
 
         #contenido>main>#contenidoCentral>article>.textoArticulo{
@@ -79,6 +82,7 @@ body{
             text-align: center;
             align-items: center;
             font-size: 20px;
+            font-family: 'Roboto', sans-serif;
         }
 
         #contenido>main>#contenidoCentral>article>.botonesArticulo>.botonEliminar{
@@ -182,6 +186,7 @@ body{
                     font-size: 22px;
                     font-weight: bold;
                     flex-grow: 1;
+                    font-family: 'Roboto', sans-serif;
                 }
 
                 #contenido>main>#contenidoLateral>#categorias>.categoria>.texto>.numeroTareas{
@@ -226,6 +231,7 @@ body{
     width: 30%;
     text-align: center;
     font-size: 24px;
+    font-family: 'Roboto', sans-serif;
 }
 
 #editar>#contenidoFormulario{
@@ -263,6 +269,7 @@ body{
     font-size: 20px;
     font-weight: bold;
     padding: 2%;
+    font-family: 'Roboto', sans-serif;
 }
 
 #formulario>div>select{
@@ -308,6 +315,7 @@ body{
     width: 30%;
     transition: 0.6s; 
     margin: 3%;
+    font-family: 'Roboto', sans-serif;
 }
 
 
